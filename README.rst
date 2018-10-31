@@ -67,6 +67,7 @@ Requirements:
 Install:
 
 pySSLScan requires to use a patch version of requests to support deprecated SSL versions.
+
 .. code-block:: console
 
    $ pip install requests_SSL_v2
