@@ -118,4 +118,4 @@ License
 
 Published under the LGPLv3+ (see LICENSE for more information)
 
-.. _`documentation`: http://pysslscan.readthedocs.org/
+.. _`documentation`: http://pysslscan.readthedocs.org/ 
