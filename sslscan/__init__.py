@@ -1,27 +1,33 @@
-import importlib
-import logging
-import os
-import re
-
-from pprint import pformat
-
-from six.moves.urllib.parse import urlparse, parse_qs
-
-import flextls
-
-from sslscan.__about__ import (
-    __author__, __copyright__, __email__, __license__, __summary__, __title__,
-    __uri__, __version__
-)
-from sslscan.config import ScanConfig
-from sslscan.exception import ModuleLoadStatus, ModuleNotFound
-from sslscan.kb import KnowledgeBase
-from sslscan.module import STATUS_OK
-from sslscan.module.handler import BaseHandler
-from sslscan.module.rating import BaseRating
-from sslscan.module.report import BaseReport
-from sslscan.module.scan import BaseScan
-
+try:
+    import requests
+    if requests.__title__ != "requests_SSL_v2":
+        raise Exception("Dependency not installed")
+    import importlib
+    import logging
+    import os
+    import re
+    import time
+    from pprint import pformat
+    
+    from six.moves.urllib.parse import urlparse, parse_qs
+    
+    import flextls
+    
+    from sslscan.__about__ import (
+        __author__, __copyright__, __email__, __license__, __summary__, __title__,
+        __uri__, __version__
+    )
+    from sslscan.config import ScanConfig
+    from sslscan.exception import ModuleLoadStatus, ModuleNotFound
+    from sslscan.kb import KnowledgeBase
+    from sslscan.module import STATUS_OK
+    from sslscan.module.handler import BaseHandler
+    from sslscan.module.rating import BaseRating
+    from sslscan.module.report import BaseReport
+    from sslscan.module.scan import BaseScan
+except Exception as e:
+    print("You need to install the requirements: pip3 install -r requirements.txt")
+    exit(-1)
 
 logger = logging.getLogger(__name__)
 

@@ -66,32 +66,9 @@ Requirements:
 
 Install:
 
-pySSLScan requires to use a patch version of requests to support deprecated SSL versions.
-
 .. code-block:: console
 
-   $ pip install requests_SSL_v2
-
-At the time of writing pySSLScan requires the development version of the cryptography packages. Use the source directly from the git repository. https://github.com/pyca/cryptography
-
-.. code-block:: console
-
-    $ pip install sslscan
-
-Install Terminal(Stable, since 0.6):
-
-Install pySSLScan and all dependencies to optimize terminal usage.
-
-.. code-block:: console
-
-    $ pip install 'sslscan[terminal]'
-
-Install Terminal(Development):
-
-.. code-block:: console
-
-    $ pip install -e '.[terminal]'
-
+   $ pip3 install -r requirements.txt
 
 Usage
 -----
@@ -101,7 +78,7 @@ To scan a HTTPS service:
 
 .. code-block:: console
 
-    $ pysslscan scan --scan=protocol.http --scan=vuln.heartbleed --scan=server.renegotiation \
+    $ python3 sslscan.py --scan=protocol.http --scan=vuln.heartbleed --scan=server.renegotiation \
       --scan=server.preferred_ciphers --scan=server.ciphers \
       --report=term:rating=ssllabs.2009e --ssl2 --ssl3 --tls10 --tls11 --tls12 http://example.org
 
@@ -110,7 +87,7 @@ To display more information:
 
 .. code-block:: console
 
-    $ pysslscan --help
+    $ python3 sslscan.py --help
 
 
 License

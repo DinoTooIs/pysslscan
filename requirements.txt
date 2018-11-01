@@ -1,0 +1,6 @@
+requests-SSL-v2
+sslscan
+flextls
+six
+cryptography
+pyOpenSSL
