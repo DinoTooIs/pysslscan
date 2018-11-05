@@ -1,7 +1,4 @@
 try:
-    import requests
-    if requests.__title__ != "requests_SSL_v2":
-        raise Exception("Dependency not installed")
     import importlib
     import logging
     import os
@@ -26,7 +23,8 @@ try:
     from sslscan.module.report import BaseReport
     from sslscan.module.scan import BaseScan
 except Exception as e:
-    print("You need to install the requirements: pip3 install -r requirements.txt")
+    print(str(e))
+    print("You need to install the requirements: pip install -r requirements.txt")
     exit(-1)
 
 logger = logging.getLogger(__name__)
