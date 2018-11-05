@@ -1,6 +1,5 @@
-requests-SSL-v2
 sslscan
-flextls
+flextls-v2
 six
 cryptography
 pyOpenSSL
